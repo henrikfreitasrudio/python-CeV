@@ -1,7 +1,21 @@
-cont = 0
-nomes = ('Henrik', 'Leticia', 'Caik', 'Felipe', 'Antonio', 'Luzia')
-for palavra in nomes:
-    print(f'\nO nome {palavra.upper()} possui as vogais: ', end='')
-    for letra in palavra:
-        if letra in 'aeiou':
-            print(letra, end='')
+listanum = []
+maior = 0
+menor = 0
+
+for c in range(0, 5):
+    listanum.append(int(input(f'Digite um valor para a posição {c}: ')))
+    if c == 0:
+        maior = men = listanum[c]
+    else:
+        if listanum[c] > maior:
+            maior = listanum[c]
+        if listanum[c] < menor:
+            menor = listanum[c]
+
+print('=' * 30)
+print(f'Você digitou os valores {listanum}')
+print(f'O maior valor digitado foi {maior} nas posições ', end='')
+for i, c in enumerate(listanum):
+
+print(f'O menor valor digitado foi {menor} nas posições ', end='')
+

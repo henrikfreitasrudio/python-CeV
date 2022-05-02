@@ -1,15 +1,16 @@
-cont = 0
-valor = (int(input('Informe um número: ')), int(input('Informe outro número: ')), int(input('Informe mais um número: ')),
+valor = (int(input('Informe um número: ')),
+         int(input('Informe outro número: ')),
+         int(input('Informe mais um número: ')),
          int(input('Informe o último número: ')))
-print('Os valores informados foram:', end=' ')
-for c in valor:
-    print(c, end=' ')
-    if c == 3:
-        cont += 1
-print(f'\nO número 9 foi informado {valor.count(9)} vezes')
-if cont == 1:
+print(f'Os valores informados foram: {valor}')
+
+print(f'O número 9 apareceu {valor.count(9)} vezes')
+if 3 in valor:
     print(f'O primeiro valor 3 apareceu na {(valor.index(3)) + 1}ª posição.')
 else:
-    print('O valor 3 não foi informado em nenhuma posição.')
-# faltou a tupla com os números pares
- 
+    print('O valor 3 não foi digitado em nenhuma posição!!')
+
+print('Valores pares na tupla: ', end='')
+for c in range(0, len(valor)):
+    if valor[c] % 2 == 0:
+        print(valor[c], end=' ')
